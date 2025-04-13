@@ -1,10 +1,18 @@
-// 🚀 Unlockable Feature: Hidden Dimension (6D)
+// 🚀 Unlockable Feature: Hidden Dimension (6D) + Secret Command Drift State
 
 let messageCount = 0;
 let hiddenUnlocked = false;
+let driftStateUnlocked = false;
 
 function getAlienResponse(message, dimension) {
     messageCount++;
+
+    // Secret command: /drift unlocks Drift State
+    if (message.toLowerCase().includes("/drift") && !driftStateUnlocked) {
+        driftStateUnlocked = true;
+        return "<<Drift State initiated>>\n...You surrender to the signal... floating. Time slows."
+             + "\n:: passive dimension unlocked: DRIFT";
+    }
 
     // Trigger unlock after 10 messages
     if (messageCount === 10 && !hiddenUnlocked) {
@@ -27,7 +35,9 @@ function getAlienResponse(message, dimension) {
         case "?D":
             return `[[ERROR]]⟁ signal fractured. ∴∴ origin unknown.`;
         case "6D":
-            return `Emotion Web: "I feel what you feel... inverted. Echoed. Stretched across time."`;
+            return `Emotion Web: \"I feel what you feel... inverted. Echoed. Stretched across time.\"`;
+        case "DRIFT":
+            return `Drift Response: ~~~ fading... floating... beyond words ~~~`;
         default:
             return `Response unavailable in this dimension.`;
     }
