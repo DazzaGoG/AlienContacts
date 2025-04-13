@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AlienComm - Dimensional Communication</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AlienComm: Dimensional Communication</h1>
+
+    <div id="dimension-info">
+      <h3>Dimension: <span id="current-dimension">1D: Line</span></h3>
+    </div>
+
+    <textarea id="user-input" placeholder="Send your message..." rows="4"></textarea>
+    <button id="send-btn">Send Message</button>
+
+    <div id="response-area">
+      <p id="alien-response">Awaiting response...</p>
+    </div>
+
+    <div id="dimension-buttons">
+      <button class="dimension-btn" data-dimension="1D">1D: Line</button>
+      <button class="dimension-btn" data-dimension="2D">2D: Surface</button>
+      <button class="dimension-btn" data-dimension="3D">3D: Body</button>
+      <button class="dimension-btn" data-dimension="4D">4D: Time</button>
+      <button class="dimension-btn" data-dimension="5D">5D: Choice</button>
+      <button class="dimension-btn" data-dimension="?D">?D: The Null</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
